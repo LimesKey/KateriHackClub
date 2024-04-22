@@ -5,14 +5,17 @@
     let time = 'test';
         // When using the Tauri API npm package:
     import { invoke } from '@tauri-apps/api/tauri';
-    // When using the Tauri global script (if not using the npm package)
-    // Be sure to set `build.withGlobalTauri` in `tauri.conf.json` to true
 
     async function get_stuff() {
+        try {
         time = await invoke('display_time')
         console.log(time)
+        }
+        catch(error) {
+            console.error('Error occurred:', error);
+        }
     }
-    get_stuff();
+    get_stuff()
 </script>
 
 <h2>Current time:  {time}</h2>
