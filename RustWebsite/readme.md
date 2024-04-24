@@ -1,0 +1,1 @@
+While technically you cannot create websites purely in Rust as websites require HTML, you can create features that websites could use such as a counter button, or a sign up form, or a time converter. These are some simple ideas you can implement on the backend of a website.
